@@ -5,6 +5,9 @@ function countLetters(strInput){
   var charCount = {};
   for(var i=0; i< strInput.length; i++){
     // read each character
+    // skip blanks
+    if (strInput[i] === " ")
+      continue;
     if (typeof(charCount[strInput[i]]) !== "number") {
       // if undefined then this is the first time we are counting this character
       // so value is 1
